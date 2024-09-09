@@ -61,34 +61,6 @@ Task Manager API is a RESTful API built with Node.js and Express.js that allows 
     ```bash
     npm test
 
-## API Endpoints
-Method	Endpoint	        Description	                    Authentication
-POST	/users/register	    Register a new user	            No
-POST	/users/login	    Login and get JWT token	        No
-POST	/users/logout	    Logout a user	                Yes
-GET	    /users/me	        Get current user profile	    Yes
-POST	/tasks	            Create a new task	            Yes
-GET	    /tasks	            Get all tasks with filtering	Yes
-GET	    /tasks/:id	        Get a task by ID	            Yes
-PATCH	/tasks/:id	        Update a task	                Yes
-DELETE	/tasks/:id	        Delete a task	                Yes
-
-## Project Structure
-.
-├── src
-│   ├── models          # Mongoose models for User and Task
-│   ├── routes          # API route definitions for users and tasks
-│   ├── middleware      # Middleware for authentication
-│   ├── notifications   # Scheduled tasks and email reminders
-│   ├── swagger.js      # Swagger documentation setup
-│   ├── db.js           # MongoDB connection logic
-│   └── app.js          # Express app setup
-├── tests               # Mocha/Chai tests for the API
-├── .env                # Environment variables (not included in the repository)
-├── .gitignore          # Git ignore file
-├── package.json        # Node.js dependencies and scripts
-└── README.md           # Project documentation
-
 ## Deployment
 For deployment, you can use platforms such as Heroku or DigitalOcean. Ensure that environment variables (MONGODB_URL, JWT_SECRET, etc.) are correctly configured on your deployment platform.
 
